@@ -1,0 +1,6 @@
+﻿Hello, my name is ShanNei
+As you can see, what you're looking at is a GalGame example made in Unity.
+I haven't been into Unity for a long time, and I'm not very good at writing code.
+If you have better ideas, you can submit an issue~
+Project warehouse address: https://github.com/CreamShanNei/GalGame-Template
+Hope this template can help you~

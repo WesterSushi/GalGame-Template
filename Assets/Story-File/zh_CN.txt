@@ -1,0 +1,6 @@
+﻿你好呀，我叫山内。
+如你所见，你现在看到的是一个用Unity制作的GalGame示例。
+本人入坑Unity不是很久，不是很会写代码。
+如果有更好的想法，可以提交issue哦~
+项目仓库地址：https://github.com/CreamShanNei/GalGame-Template
+希望这个模板可以帮助到你~
