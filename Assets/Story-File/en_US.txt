@@ -1,6 +1,17 @@
-﻿Hello, my name is ShanNei
+﻿Hello, my name is ShanNei.
 As you can see, what you're looking at is a GalGame example made in Unity.
 I haven't been into Unity for a long time, and I'm not very good at writing code.
 If you have better ideas, you can submit an issue~
 Project warehouse address: https://github.com/CreamShanNei/GalGame-Template
 Hope this template can help you~
+ShanNei not only did this
+He is also the main person in charge of ZeroDream.
+Or the COO of ELYART?
+Next is a little story I wrote, Enjoy~
+.
+Once upon a time. . It's a beautiful world
+But, one day, an evil devil
+He encrypted this continent with a lock
+Travelers are now required to travel between worlds
+looking for that evil devil
+Release the curse of this world.

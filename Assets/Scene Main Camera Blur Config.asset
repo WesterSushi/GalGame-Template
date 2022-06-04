@@ -15,4 +15,4 @@ MonoBehaviour:
   radius: 4
   iteration: 4
   maxDepth: 6
-  strength: 0
+  strength: 64
