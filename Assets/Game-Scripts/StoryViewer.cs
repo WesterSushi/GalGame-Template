@@ -11,10 +11,12 @@ public class StoryViewer : MonoBehaviour
     public Text messageText;
     public String[] messages;
     public int now = 0;
+    public SystemLanguage Language;
     private void Start()
     {
         storyReader = FindObjectOfType<StoryReader>();
-        switch (Application.systemLanguage)
+        //switch (Application.systemLanguage)
+        switch (Language)
         {
             case SystemLanguage.ChineseSimplified:
                 messages = storyReader.zh_CN_str;
