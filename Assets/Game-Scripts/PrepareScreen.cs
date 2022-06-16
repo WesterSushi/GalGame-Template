@@ -8,7 +8,7 @@ public class PrepareScreen : MonoBehaviour
 {
     public CanvasGroup PreparGroup;
     public StoryViewer reader;
-    public bool isStart;
+    public bool isRunning;
 
     private void Start()
     {
@@ -18,9 +18,9 @@ public class PrepareScreen : MonoBehaviour
     IEnumerator GameStart()
     {
         yield return new WaitForSeconds(1f);
-        PreparGroup.DOFade(0f, 1f).SetEase(Ease.OutBounce);
+        PreparGroup.DOFade(0f, 1f).SetEase(Ease.OutSine);
         yield return new WaitForSeconds(1f);
         reader.enabled = true;
-        isStart = true;
+        isRunning = true;
     }
 }

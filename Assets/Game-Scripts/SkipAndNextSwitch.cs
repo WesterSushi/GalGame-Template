@@ -1,15 +1,14 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
 using DG.Tweening;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SkipAndNextSwitch : MonoBehaviour
 {
     public StoryViewer Viewer;
     public CanvasGroup Skip, Next;
+    public CanvasGroup DarkScreen;
 
     private void Start()
     {
@@ -37,16 +36,28 @@ public class SkipAndNextSwitch : MonoBehaviour
             Viewer.messageText.text = " ";
             Viewer.messageText.DOText(Viewer.messages[Viewer.now], PlayerPrefs.GetInt("msg_duration", 4));
         }
+        else
+        {
+            StartCoroutine(LoadNextScene());
+        }
     }
 
     private void Update()
     {
-        if (FindObjectOfType<PrepareScreen>().isStart)
+        if (FindObjectOfType<PrepareScreen>().isRunning)
         {
-            if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)) && Viewer.now < Viewer.messages.Length - 1)
+            if ((Input.GetKey(KeyCode.LeftControl) || Input.GetKey(KeyCode.RightControl)))
             {
-                Viewer.now += 1;
-                Viewer.messageText.text = Viewer.messages[Viewer.now];
+                if (Viewer.now < Viewer.messages.Length - 1)
+                {
+                    Viewer.now += 1;
+                    Viewer.messageText.text = Viewer.messages[Viewer.now];
+                }
+                else
+                {
+                    FindObjectOfType<PrepareScreen>().isRunning = false;
+                    StartCoroutine(LoadNextScene());
+                }
             }
 
             if (Viewer.messageText.text == Viewer.messages[Viewer.now])
@@ -54,5 +65,12 @@ public class SkipAndNextSwitch : MonoBehaviour
                 skip();
             }
         }
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        DarkScreen.DOFade(1f, 1f).SetEase(Ease.OutSine);
+        yield return new WaitForSeconds(1f);
+        //SceneManager.LoadSceneAsync(Application.loadedLevel + 1);
     }
 }
