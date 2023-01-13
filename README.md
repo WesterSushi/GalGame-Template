@@ -1,26 +1,20 @@
 # GalGame-Template
- A Unity Template to makea galgame
+该Galgame模板使用Unity 2021.3.6f1c1开发
 
-Still Coding...
+进度:
 
-Currently planning to implement:
+- [ ] 进度回溯
+- [x] Ctrl键快速跳过剧情
+- [x] 游戏底层代码实现
+- [ ] 音频播放
+- [ ] 存档
+- [ ] CG
+- [ ] BGA
+- [ ] 角色配音
+- [ ] 角色动画
 
-x progress backtracking
+项目中的所有材料都来自互联网
 
-√ Ctrl to speed up skip
+本项目仅用于学习和交流
 
-√ The bottom layer of the game
-
-x Music playback
-
-x Archive
-
-x CG
-
-x BGA
-
-x dubbing
-
-x Character animation
-
-All materials in the project come from the Internet. This project is only for learning and communication. All forms of commercial behavior are prohibited.
+禁止任何形式的商业行为
